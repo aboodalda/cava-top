@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cava Top | مطعم وكافتيريا</title>
+<meta name="description" content="المنيو الرسمي لمطعم وكافتيريا Cava Top">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="brand">
+    <div class="brand-badge">☕</div>
+    <div>
+      <div class="brand-name" id="navName">Cava Top</div>
+      <div class="brand-sub">مطعم وكافتيريا</div>
+    </div>
+  </div>
+  <a href="#menu" class="nav-link">المنيو ↓</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="ember-divider hero-eyebrow">
+      <span class="line"></span><span>أهلاً بكم</span><span class="line rev"></span>
+    </div>
+    <h1 class="hero-title h-display"><span id="heroName">Cava Top</span></h1>
+    <p class="hero-desc" id="heroTagline">تجربة طعام استثنائية — أشهى الأطباق، أفضل المشروبات، وأجواء مميزة تستحق التكرار.</p>
+    <div class="hero-actions">
+      <a href="tel:" id="callBtn" class="btn btn-outline">📞 اتصل بنا</a>
+      <a href="#menu" class="btn btn-gold">🍽️ تصفح المنيو</a>
+    </div>
+  </div>
+</header>
+
+<div class="info-strip">
+  <div class="info-card">
+    <div class="info-icon">🕒</div>
+    <div><div class="info-label">أوقات العمل</div><div class="info-value" id="infoHours">—</div></div>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">⭐</div>
+    <div><div class="info-label">تقييمنا</div><div class="info-value" id="infoRating">—</div></div>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">📍</div>
+    <div><div class="info-label">موقعنا</div><div class="info-value" id="infoLocation">—</div></div>
+  </div>
+  <div class="info-card">
+    <div class="info-icon">☎️</div>
+    <div><div class="info-label">اتصل بنا</div><div class="info-value" id="infoPhone">—</div></div>
+  </div>
+</div>
+
+<section class="menu-section" id="menu">
+  <div class="menu-heading">
+    <div class="ember-divider"><span class="line"></span><span>القائمة</span><span class="line rev"></span></div>
+    <h2 class="h-display">منيو Cava Top</h2>
+    <p>اختر من أصنافنا المتنوعة</p>
+  </div>
+
+  <div class="search-row">
+    <div class="search-box">
+      <span>🔍</span>
+      <input type="text" id="searchInput" placeholder="ابحث عن طبق...">
+    </div>
+  </div>
+
+  <div class="cat-nav" id="catNav"></div>
+
+  <div class="items-grid" id="itemsGrid"></div>
+  <div class="empty-state" id="emptyState" style="display:none">
+    <div class="icon">🍴</div>
+    <div>لا توجد أصناف حالياً</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  صُنع بعناية لـ <strong id="footName">Cava Top</strong> — © <span id="year"></span>
+</footer>
+
+<!-- floating cart bar -->
+<button class="cart-bar" id="cartBar" style="display:none">
+  <span class="cart-bar-count" id="cartBarCount">0</span>
+  <span class="cart-bar-label">عرض السلة</span>
+  <span class="cart-bar-total" id="cartBarTotal">0 ₪</span>
+</button>
+
+<!-- cart modal -->
+<div class="cart-overlay" id="cartOverlay">
+  <div class="cart-sheet">
+    <div class="cart-sheet-head">
+      <h3>🛒 سلة الطلبات</h3>
+      <button id="cartCloseBtn" class="icon-btn">✕</button>
+    </div>
+    <div class="cart-items" id="cartItemsList"></div>
+    <div class="cart-empty" id="cartEmptyMsg">السلة فارغة، ضيف أصناف من المنيو</div>
+    <div class="cart-sheet-foot" id="cartFoot" style="display:none">
+      <div class="cart-total-row">
+        <span>المجموع</span>
+        <span class="cart-total-value" id="cartTotalValue">0 ₪</span>
+      </div>
+      <button class="btn btn-gold btn-block" id="cartSendBtn">إرسال الطلب عبر واتساب 📩</button>
+      <button class="btn btn-outline btn-block" id="cartClearBtn">إفراغ السلة</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
